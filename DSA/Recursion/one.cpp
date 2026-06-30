@@ -33,7 +33,7 @@ int fibo(int n){
 
 bool BinarySearch(int arr[],int left,int right,int k){
 
-    if(left==0 && right==0)return false;
+    if(left >right)return false;
 
     int mid=left+right/2;
 
