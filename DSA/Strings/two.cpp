@@ -13,12 +13,24 @@ string revString(string s){
     return s;
 }
 
+string removeDuplicate(string s){
+    unordered_map<char,bool>map;
+    string ans=" ";
+    for(auto ch:s){
+        if(!map[ch]){
+            ans+=ch;
+            map[ch]=true;
+        }
+    }
+    return ans;
+}
+
 int main(){
    string s;
    cin>>s;
    string rev=revString(s);
    cout<<rev<<endl;
-  
+  cout<<removeDuplicate(s);
 
     
 
